@@ -1,0 +1,66 @@
+# Runtime outputs (contain absolute paths; never commit)
+runs/
+output/
+*.log
+logs.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Model weights (download separately per README)
+third_party/*/weights/
+third_party/*/checkpoints/
+third_party/*/pretrained/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.h5
+*.npz
+*.npy
+*.gguf
+*.mlmodel
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+.ipynb_checkpoints/
+
+# Large data / media
+*.mp4
+*.mov
+*.avi
+!docs/**/*.mp4
+NExTVideo/
+data/videos/
+
+# Private human-eval data (IRB-protected; aggregate-only release per consent)
+evidence_qa_export/
+
+# Local dataset-release staging (publish via HF, not GitHub)
+nextcf_release/
+nextcf_release_upload/
+
+# Secrets / credentials — never commit
+.env
+.env.*
+.envrc
+*.key
+*.pem
+secrets.json
+credentials.json

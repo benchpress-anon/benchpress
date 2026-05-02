@@ -1,0 +1,4 @@
+[submodule "third_party/DiffuEraser"]
+	path = third_party/DiffuEraser
+	url = https://github.com/lixiaowen-xw/diffueraser
+	branch = master
