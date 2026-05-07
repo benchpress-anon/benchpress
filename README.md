@@ -91,7 +91,7 @@ python batch_runner.py \
 ## Hardware
 
 - **GPU:** 8+ GB VRAM minimum, 24 GB recommended
-- **Multi-GPU:** SAM3 distributes image model, tracker, and DINOv3 across GPUs
+- **Multi-GPU:** SAM3 distributes image model and tracker across GPUs
 - **Turing GPUs (RTX 6000, SM 7.5):** bf16 breaks SDPA — backends auto-detect and use fp16
 
 ## Key Options
@@ -101,7 +101,6 @@ python batch_runner.py \
 | `--edit-backend` | `diffueraser` | Inpainting backend; `telea` is a cv2 fallback for failed clips |
 | `--sam3-video-tracker` | ON | Bidirectional mask propagation (recommended) |
 | `--no-sam3-video-tracker` | — | Per-frame text segmentation fallback |
-| `--dino-verify` | OFF | DINOv3 verification after tracker |
 | `--multi-object` | OFF | Track multiple objects separately |
 | `--reuse-masks` | — | Skip segmentation, reuse saved masks |
 | `--skip-inpaint` | — | Only run segmentation + overlay |
